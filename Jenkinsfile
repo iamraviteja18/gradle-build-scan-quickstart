@@ -4,8 +4,11 @@ pipeline {
   stages{
   stage('Build') {
             steps{
-       sh './gradlew build --scan'
-     }
+                sh './gradlew build --scan'
+               }
+//          steps {
+//                 sh './gradlew assemble'
+//             }
         }
         stage('Test') {
             steps {
