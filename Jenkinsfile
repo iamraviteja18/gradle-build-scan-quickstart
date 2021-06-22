@@ -3,9 +3,9 @@ pipeline {
   
   stages{
   stage('Build') {
-            steps {
-                sh './gradlew assemble'
-            }
+            steps{
+       sh './gradlew build --scan'
+     }
         }
         stage('Test') {
             steps {
